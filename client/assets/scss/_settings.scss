@@ -233,10 +233,10 @@
 // 5. Grid
 // - - - - - - - - - - - - - - -
 
- $container-width: rem-calc(900);
+ $container-width: map-get($breakpoints, 'medium');
  $block-padding: $global-padding;
  $total-columns: 12;
- $block-grid-max-size: 6;
+ $block-grid-max-size: 12;
 
 // 6. Button
 // - - - - - - - - - - - - - - -

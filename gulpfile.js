@@ -36,15 +36,27 @@ var paths = {
     'bower_components/tether/tether.js',
     'bower_components/hammerjs/hammer.js',
     'bower_components/angular/angular.js',
+    'bower_components/angular-simple-logger/dist/angular-simple-logger.js',
     'bower_components/angular-animate/angular-animate.js',
     'bower_components/angular-ui-router/release/angular-ui-router.js',
     'bower_components/foundation-apps/js/vendor/**/*.js',
     'bower_components/foundation-apps/js/angular/**/*.js',
     '!bower_components/foundation-apps/js/angular/app.js'
   ],
+  // These files include leaflet javascript
+  leafletJS: [
+    'bower_components/leaflet/dist/leaflet-src.js',
+    'bower_components/ui-leaflet/dist/ui-leaflet.js'
+
+  ],
+  // This files inlude leaflet css
+  leafletCSS: [
+    'bower_components/leaflet/dist/leaflet.css',
+  ],
   // These files are for your app's JavaScript
   appJS: [
-    'client/assets/js/app.js'
+    'client/assets/js/app.js',
+    'client/assets/js/controllers.js'
   ]
 }
 
@@ -62,6 +74,13 @@ gulp.task('copy', function() {
     base: './client/'
   })
     .pipe(gulp.dest('./build'))
+  ;
+});
+
+// Copies leaflet bower
+gulp.task('copy:leaflet', function() {
+  return gulp.src(paths.leafletCSS)
+    .pipe(gulp.dest('./build/assets/css'))
   ;
 });
 
@@ -113,7 +132,7 @@ gulp.task('sass', function () {
 });
 
 // Compiles and copies the Foundation for Apps JavaScript, as well as your app's custom JS
-gulp.task('uglify', ['uglify:foundation', 'uglify:app'])
+gulp.task('uglify', ['uglify:foundation', 'uglify:leaflet', 'uglify:app'])
 
 gulp.task('uglify:foundation', function(cb) {
   var uglify = $.if(isProduction, $.uglify()
@@ -124,6 +143,19 @@ gulp.task('uglify:foundation', function(cb) {
   return gulp.src(paths.foundationJS)
     .pipe(uglify)
     .pipe($.concat('foundation.js'))
+    .pipe(gulp.dest('./build/assets/js/'))
+  ;
+});
+
+gulp.task('uglify:leaflet', function(cb) {
+  var uglify = $.if(isProduction, $.uglify()
+    .on('error', function (e) {
+      console.log(e);
+    }));
+
+  return gulp.src(paths.leafletJS)
+    .pipe(uglify)
+    .pipe($.concat('leaflet.js'))
     .pipe(gulp.dest('./build/assets/js/'))
   ;
 });
@@ -156,7 +188,7 @@ gulp.task('server', ['build'], function() {
 
 // Builds your entire app once, without starting a server
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy:foundation', 'sass', 'uglify'], 'copy:templates', cb);
+  sequence('clean', ['copy', 'copy:foundation', 'copy:leaflet', 'sass', 'uglify'], 'copy:templates', cb);
 });
 
 // Default task: builds your app, starts a server, and recompiles assets when they change

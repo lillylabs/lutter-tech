@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audio Guide</title>
+    <title>Gatekunst på Tøyen</title>
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/leaflet.css" rel="stylesheet" type="text/css">
     <script src="./assets/js/foundation.js"></script>
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/leaflet.js"></script>
     <script src="./assets/js/app.js"></script>
   </head>
   <body>
-    <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
-        </ul>
+    <div class="grid-frame vertical medium-horizontal align-right medium-up-2">
+      <div class="grid-block" ng-controller="MapController">
+        <leaflet lf-center="center" tiles="tiles"></leaflet>
       </div>
-      <div ui-view class="grid-content">
-      </div>
+
+      <main ui-view class="grid-block vertical">
+
+      </main>
+
     </div>
   </body>
 </html>
