@@ -28,8 +28,24 @@
   }
 }
 
+.leaflet-control-attribution {
+  display: none;
+}
+
 .block-list {
   .badge {
     margin-right: 0.5rem;
+  }
+
+  .tour-section-0 {
+    .badge {
+      background: #01579B;
+    }
+  }
+
+  .tour-section-1 {
+    .badge {
+      background: #FF5722;
+    }
   }
 }

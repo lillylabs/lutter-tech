@@ -1,12 +1,13 @@
 ---
 name: sight
-url: /sight
+url: /sight/:slug
+controller: SightController
 ---
 
 <div class="title-bar">
-  <div class="center title">Kunstverket</div>
+  <div class="center title" ng-bind="sight.title"></div>
   <span class="title left"><a ui-sref="home">Tilbake</a></span>
 </div>
 <section class="grid-content">
-  <p>Masse fin informasjon om kunstverket</p>
+  <p ng-bind="sight.description"></p>
 </section>

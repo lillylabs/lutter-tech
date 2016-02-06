@@ -1,5 +1,27 @@
 angular.module('application')
-  .controller('MapController', [ '$scope', '$http', function($scope, $http) {
+  .controller('HomeController', [ '$scope', '$http', 'DataSource',  function($scope, $http, DataSource) {
+    DataSource.getAudioTour().then(function(tour) {
+      $scope.tour = tour;
+    });
+
+  }])
+  .controller('SightController', [ '$scope',  '$state', '$http', 'DataSource',  function($scope, $state, $http, DataSource) {
+
+    var slug = ($state.params.slug);
+    if(!slug) {
+      return;
+    }
+
+    console.log("SLUG " + slug);
+
+    DataSource.getSight(slug).then(function(sight) {
+      console.log("SIGHT");
+      console.log(sight);
+      $scope.sight = sight;
+    });
+
+  }])
+  .controller('MapController', [ '$scope', '$http', 'DataSource', function($scope, $http, DataSource) {
 
     var tilesDict = {
       mapbox_pirates: {

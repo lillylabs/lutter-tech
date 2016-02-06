@@ -1,22 +1,23 @@
 ---
 name: home
 url: /
+controller: HomeController
 ---
 
 <div class="title-bar">
   <div class="center title">Gatekunst på Tøyen</div>
 </div>
+
 <section class="grid-content block-list">
-  <header>Veggmaleri</header>
-  <ul>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">1</span> Veggmaleri 1</a></li>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">2</span> Veggmaleri 2</a></li>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">3</span> Veggmaleri 3</a></li>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">4</span> Veggmaleri 4</a></li>
-  </ul>
-  <header>Annet</header>
-  <ul>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">5</span> Blomsterkasser</a></li>
-    <li class="with-chevron"><a ui-sref="sight"><span class="badge">6</span> Noe helt annet</a></li>
-  </ul>
+  <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">
+    <header ng-bind="section.title"></header>
+    <ul>
+      <li ng-repeat="sight in section.sights" class="with-chevron">
+        <a ui-sref="sight({ slug: sight.slug })">
+          <span class="badge" style="background-color: {{section.color}}" ng-bind="$index+1"></span>
+          <span ng-bind="sight.title"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>

@@ -1,0 +1,60 @@
+{
+  "sections": [
+    {
+      "sights": [
+        {
+          "description": "Et veldig flott veggmaleri",
+          "location": {
+            "lat": 59.913794,
+            "long": 10.765893
+          },
+          "slug": "veggmaleri-1",
+          "title": "Veggmaleri 1"
+        },
+        {
+          "description": "Et veldig flott veggmaleri",
+          "location": {
+            "lat": 59.915784,
+            "long": 10.763018
+          },
+          "slug": "veggmaleri-2",
+          "title": "Veggmaleri 2"
+        },
+        {
+          "description": "Et veldig flott veggmaleri",
+          "location": {
+            "lat": 59.913698,
+            "long": 10.762267
+          },
+          "slug": "veggmaleri-3",
+          "title": "Veggmaleri 3"
+        }
+      ],
+      "title": "Veggmaleri"
+    },
+    {
+      "sights": [
+        {
+          "description": "Blomsterkasser laget av ....",
+          "location": {
+            "lat": 59.916225,
+            "long": 10.765336
+          },
+          "slug": "blomsterkasser",
+          "title": "Guerilla blomsterkasser"
+        },
+        {
+          "description": "Lorem ipsum",
+          "location": {
+            "lat": 59.915203,
+            "long": 10.769842
+          },
+          "slug": "noe-annet",
+          "title": "Noe annet"
+        }
+      ],
+      "title": "Annen gatekunst"
+    }
+  ],
+  "title": "Gatekunst på Tøyen"
+}
