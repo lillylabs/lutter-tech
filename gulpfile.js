@@ -46,12 +46,17 @@ var paths = {
   // These files include leaflet javascript
   leafletJS: [
     'bower_components/leaflet/dist/leaflet-src.js',
-    'bower_components/ui-leaflet/dist/ui-leaflet.js'
+    'bower_components/ui-leaflet/dist/ui-leaflet.js',
+    'bower_components/Leaflet.label/dist/leaflet.label.js',
+    'bower_components/leaflet.markerclusterer/dist/leaflet.markercluster.js'
 
   ],
   // This files inlude leaflet css
   leafletCSS: [
     'bower_components/leaflet/dist/leaflet.css',
+    'bower_components/Leaflet.label/dist/leaflet.label.css',
+    'bower_components/leaflet.markerclusterer/dist/MarkerCluster.css',
+    'bower_components/leaflet.markerclusterer/dist/MarkerCluster.Default.css'
   ],
   // These files are for your app's JavaScript
   appJS: [

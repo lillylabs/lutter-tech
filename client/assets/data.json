@@ -8,7 +8,7 @@
             "lat": 59.913794,
             "long": 10.765893
           },
-          "slug": "veggmaleri-1",
+          "slug": "veggmaleri1",
           "title": "Veggmaleri 1"
         },
         {
@@ -17,7 +17,7 @@
             "lat": 59.915784,
             "long": 10.763018
           },
-          "slug": "veggmaleri-2",
+          "slug": "veggmaleri2",
           "title": "Veggmaleri 2"
         },
         {
@@ -26,10 +26,11 @@
             "lat": 59.913698,
             "long": 10.762267
           },
-          "slug": "veggmaleri-3",
+          "slug": "veggmaleri3",
           "title": "Veggmaleri 3"
         }
       ],
+      "color": "#FF5722",
       "title": "Veggmaleri"
     },
     {
@@ -49,10 +50,11 @@
             "lat": 59.915203,
             "long": 10.769842
           },
-          "slug": "noe-annet",
+          "slug": "noeannet",
           "title": "Noe annet"
         }
       ],
+      "color": "#01579B",
       "title": "Annen gatekunst"
     }
   ],

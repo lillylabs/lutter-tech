@@ -28,24 +28,29 @@
   }
 }
 
-.leaflet-control-attribution {
-  display: none;
+.angular-leaflet-map {
+  .leaflet-control-attribution {
+    display: none;
+  }
+
+  .leaflet-marker-icon span {
+    font-weight: bold;
+  }
+
+  .badge {
+    font-weight: bold;
+    font-size: $badge-fontsize*1.5;
+    height: $badge-diameter*1.2;
+    width: $badge-diameter*1.2;
+  }
 }
 
 .block-list {
-  .badge {
+  span {
     margin-right: 0.5rem;
-  }
-
-  .tour-section-0 {
-    .badge {
-      background: #01579B;
-    }
-  }
-
-  .tour-section-1 {
-    .badge {
-      background: #FF5722;
-    }
+    font-weight: bold;
+    height: $badge-diameter*1.2;
+    width: $badge-diameter*1.2;
+    line-height: $badge-diameter*1.2;
   }
 }

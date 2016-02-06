@@ -6,6 +6,9 @@
     <title>Gatekunst på Tøyen</title>
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/leaflet.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/leaflet.label.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/MarkerCluster.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
     <script src="./assets/js/foundation.js"></script>
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
@@ -15,7 +18,7 @@
   <body>
     <div class="grid-frame vertical medium-horizontal align-right medium-up-2">
       <div class="grid-block" ng-controller="MapController">
-        <leaflet lf-center="center" tiles="tiles"></leaflet>
+        <leaflet lf-center="center" tiles="tiles" markers="markers"></leaflet>
       </div>
 
       <main ui-view class="grid-block vertical">
