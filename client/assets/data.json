@@ -3,7 +3,7 @@
     {
       "sights": [
         {
-          "description": "Et veldig flott veggmaleri",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
           "location": {
             "lat": 59.913794,
             "long": 10.765893
@@ -12,7 +12,7 @@
           "title": "Veggmaleri 1"
         },
         {
-          "description": "Et veldig flott veggmaleri",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
           "location": {
             "lat": 59.915784,
             "long": 10.763018
@@ -21,7 +21,7 @@
           "title": "Veggmaleri 2"
         },
         {
-          "description": "Et veldig flott veggmaleri",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
           "location": {
             "lat": 59.913698,
             "long": 10.762267
@@ -36,7 +36,7 @@
     {
       "sights": [
         {
-          "description": "Blomsterkasser laget av ....",
+          "description": "<p>Blomsterkasser laget av ....</p>",
           "location": {
             "lat": 59.916225,
             "long": 10.765336
@@ -58,5 +58,6 @@
       "title": "Annen gatekunst"
     }
   ],
-  "title": "Gatekunst på Tøyen"
+  "title": "Gatekunst på Tøyen",
+  "description": "<p>En initativ fra Tøyenløftet.</p>"
 }

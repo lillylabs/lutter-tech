@@ -4,9 +4,10 @@ url: /
 controller: HomeController
 ---
 
-<div class="title-bar">
-  <div class="center title">Gatekunst på Tøyen</div>
-</div>
+<header>
+  <h3 ng-bind="tour.title"></h3>
+<!--  <div ng-bind-html="tour.description"></div>-->
+</header>
 
 <section class="grid-content block-list">
   <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">

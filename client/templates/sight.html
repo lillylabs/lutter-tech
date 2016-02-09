@@ -4,10 +4,10 @@ url: /sight/:slug
 controller: SightController
 ---
 
-<div class="title-bar">
-  <div class="center title" ng-bind="sight.title"></div>
-  <span class="title right"><a ui-sref="home">Til oversikt</a></span>
-</div>
+<nav>
+  <a ui-sref="home">&larr; Tilbake til oversikten</a>
+</nav>
 <section class="grid-content">
-  <p ng-bind="sight.description"></p>
+  <h3 ng-bind="sight.title"></h3>
+<!--  <div ng-bind-html="sight.description"></div>-->
 </section>
