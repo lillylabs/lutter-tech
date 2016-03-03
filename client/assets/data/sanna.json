@@ -1,0 +1,66 @@
+{
+  "title": "Øya Sanna",
+  "description": "<p>En audioguide i fem deler.</p>",
+  "center": {
+    "lat": 66.504603,
+    "lng": 12.058286,
+    "zoom": 16
+  },
+  "tiles": {
+    "name": "Kartverket",
+    "url": "http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2graatone&zoom={z}&x={x}&y={y}",
+    "type": "xyz"
+  },
+  "sections": [
+    {
+      "color": "#FF5722",
+      "sights": [
+        {
+          "title": "Punkt 1",
+          "slug": "punkt1",
+          "description": "<p>Beskrivelse</p>",
+          "location": {
+            "lat": 66.506498,
+            "lng": 12.057010
+          }
+        },
+        {
+          "title": "Punkt 2",
+          "slug": "punkt2",
+          "description": "<p>Beskrivelse</p>",
+          "location": {
+            "lat": 66.503357,
+            "lng": 12.056979
+          }
+        },
+        {
+          "title": "Punkt 3",
+          "slug": "punkt3",
+          "description": "<p>Beskrivelse</p>",
+          "location": {
+            "lat": 66.502645,
+            "lng": 12.054496
+          }
+        },
+        {
+          "title": "Punkt 4",
+          "slug": "punkt4",
+          "description": "<p>Beskrivelse</p>",
+          "location": {
+            "lat": 66.503512,
+            "lng": 12.059343
+          }
+        },
+        {
+          "title": "Punkt 5",
+          "slug": "punkt5",
+          "description": "<p>Beskrivelse</p>",
+          "location": {
+            "lat": 66.502287,
+            "lng": 12.058642
+          }
+        }
+      ]
+    }
+  ]
+}

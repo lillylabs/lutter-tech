@@ -1,0 +1,63 @@
+{
+  "title": "Gatekunst på Tøyen",
+  "description": "<p>En initativ fra Tøyenløftet.</p>",
+  "sections": [
+    {
+      "title": "Veggmaleri",
+      "color": "#FF5722",
+      "sights": [
+        {
+          "title": "Veggmaleri 1",
+          "slug": "veggmaleri1",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "location": {
+            "lat": 59.913794,
+            "lng": 10.765893
+          }
+        },
+        {
+          "title": "Veggmaleri 2",
+          "slug": "veggmaleri2",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "location": {
+            "lat": 59.915784,
+            "lng": 10.763018
+          }
+        },
+        {
+          "title": "Veggmaleri 3",
+          "slug": "veggmaleri3",
+          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "location": {
+            "lat": 59.913698,
+            "lng": 10.762267
+          }
+        }
+      ]
+    },
+    {
+      "title": "Annen gatekunst",
+      "color": "#01579B",
+      "sights": [
+        {
+          "title": "Guerilla blomsterkasser",
+          "slug": "blomsterkasser",
+          "description": "<p>Blomsterkasser laget av ....</p>",
+          "location": {
+            "lat": 59.916225,
+            "lng": 10.765336
+          }
+        },
+        {
+          "title": "Noe annet",
+          "slug": "noeannet",
+          "description": "Lorem ipsum",
+          "location": {
+            "lat": 59.915203,
+            "lng": 10.769842
+          }
+        }
+      ]
+    }
+  ]
+}

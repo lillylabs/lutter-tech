@@ -8,12 +8,19 @@
 var $        = require('gulp-load-plugins')();
 var argv     = require('yargs').argv;
 var gulp     = require('gulp');
+var rename   = require('gulp-rename');
 var rimraf   = require('rimraf');
 var router   = require('front-router');
 var sequence = require('run-sequence');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
+
+// Use --dataFile flag
+var data = 'data';
+if(argv.data) {
+  data = argv.data;
+};
 
 // 2. FILE PATHS
 // - - - - - - - - - - - - - - -
@@ -22,7 +29,7 @@ var paths = {
   assets: [
     './client/**/*.*',
     '!./client/templates/**/*.*',
-    '!./client/assets/{scss,js}/**/*.*'
+    '!./client/assets/{scss,js,data}/**/*.*'
   ],
   // Sass will check these folders for files when you use @import.
   sass: [
@@ -79,8 +86,15 @@ gulp.task('copy', function() {
   return gulp.src(paths.assets, {
     base: './client/'
   })
-    .pipe(gulp.dest('./build'))
+  .pipe(gulp.dest('./build'))
   ;
+});
+
+// Copies the coorrect data file in the client's data folder
+gulp.task('copy:data', function() {
+  return gulp.src('./client/assets/data/' + data + '.json')
+    .pipe(rename('data.json'))
+    .pipe(gulp.dest("./build/assets"));
 });
 
 // Copies leaflet bower
@@ -194,7 +208,7 @@ gulp.task('server', ['build'], function() {
 
 // Builds your entire app once, without starting a server
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy:foundation', 'copy:leaflet', 'sass', 'uglify'], 'copy:templates', cb);
+  sequence('clean', ['copy', 'copy:data', 'copy:foundation', 'copy:leaflet', 'sass', 'uglify'], 'copy:templates', cb);
 });
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
