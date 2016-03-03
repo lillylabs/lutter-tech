@@ -1,63 +1,63 @@
 {
+  "title": "Eksempel",
+  "description": "<p>Eksempel audio guide</p>",
   "sections": [
     {
+      "title": "Seksjon 1",
+      "color": "#FF5722",
       "sights": [
         {
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "title": "Punkt 1",
+          "slug": "punkt1",
+          "description": "<p>Beskrivelse</p>",
           "location": {
             "lat": 59.913794,
-            "long": 10.765893
-          },
-          "slug": "veggmaleri1",
-          "title": "Veggmaleri 1"
+            "lng": 10.765893
+          }
         },
         {
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "title": "Punkt 2",
+          "slug": "punkt2",
+          "description": "<p>Beskrivelse</p>",
           "location": {
             "lat": 59.915784,
-            "long": 10.763018
-          },
-          "slug": "veggmaleri2",
-          "title": "Veggmaleri 2"
+            "lng": 10.763018
+          }
         },
         {
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "title": "Punkt 3",
+          "slug": "punkt3",
+          "description": "<p>Beskrivelse</p>",
           "location": {
             "lat": 59.913698,
-            "long": 10.762267
-          },
-          "slug": "veggmaleri3",
-          "title": "Veggmaleri 3"
+            "lng": 10.762267
+          }
         }
-      ],
-      "color": "#FF5722",
-      "title": "Veggmaleri"
+      ]
     },
     {
+      "title": "Seksjon 2",
+      "color": "#01579B",
       "sights": [
         {
-          "description": "<p>Blomsterkasser laget av ....</p>",
+          "title": "Punkt 4",
+          "slug": "punkt4",
+          "description": "<p>Beskrivelse</p>",
           "location": {
             "lat": 59.916225,
-            "long": 10.765336
-          },
-          "slug": "blomsterkasser",
-          "title": "Guerilla blomsterkasser"
+            "lng": 10.765336
+          }
         },
         {
-          "description": "Lorem ipsum",
+          "title": "Punkt 5",
+          "slug": "punkt5",
+          "description": "<p>Beskrivelse</p>",
           "location": {
             "lat": 59.915203,
-            "long": 10.769842
-          },
-          "slug": "noeannet",
-          "title": "Noe annet"
+            "lng": 10.769842
+          }
         }
-      ],
-      "color": "#01579B",
-      "title": "Annen gatekunst"
+      ]
     }
-  ],
-  "title": "Gatekunst på Tøyen",
-  "description": "<p>En initativ fra Tøyenløftet.</p>"
+  ]
 }
