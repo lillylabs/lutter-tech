@@ -15,7 +15,7 @@ controller: HomeController
     <ul>
       <li ng-repeat="sight in section.sights" class="with-chevron">
         <a ui-sref="sight({ slug: sight.slug })">
-          <span class="badge" style="background-color: {{section.color}}" ng-bind="$index+1"></span>
+          <span class="badge" style="background-color: {{section.color}}" ng-bind="sight.id"></span>
           <span ng-bind="sight.title"></span>
         </a>
       </li>

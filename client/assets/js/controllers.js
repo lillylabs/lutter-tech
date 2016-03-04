@@ -57,7 +57,7 @@ angular.module('application')
               iconSize: [24, 24],
               iconAnchor: [12, 12],
               className: 'marker',
-              html: '<span class="badge" style="background-color:'+ section.color + '">' + (sightKey+1) +'</span>'
+              html: '<span class="badge" style="background-color:'+ section.color + '">' + sight.id +'</span>'
             }
           }
         });
