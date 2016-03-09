@@ -4,7 +4,18 @@
   "fundedBy": [
     {
       "name": "Tenk Træna",
-      "logo": "tenk-traena-logo.jpg"
+      "logo": "tenk-traena-logo.jpg",
+      "url":  "http://www.tenktraena.no/"
+    }
+  ],
+  "font": [
+    {
+      "family": "'Titillium Web', sans-serif",
+      "url":  "https://fonts.googleapis.com/css?family=Titillium+Web:400,600",
+      "fontWeight": {
+        "headings": "600",
+        "body": "300"
+      }
     }
   ],
   "center": {
@@ -19,7 +30,7 @@
   },
   "sections": [
     {
-      "color": "#009999",
+      "color": "#DF4C48",
       "sights": [
         {
           "title": "Punkt 1",
