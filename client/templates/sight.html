@@ -10,4 +10,5 @@ controller: SightController
 <section class="grid-content">
   <h1 ng-bind="sight.title"></h1>
   <p ng-bind="sight.description"></p>
+  <img ng-if="sight.img" ng-src="/site/img/{{sight.img}}" />
 </section>
