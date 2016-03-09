@@ -1,6 +1,6 @@
 {
   "title": "Gatekunst på Tøyen",
-  "description": "<p>En initativ fra Tøyenløftet.</p>",
+  "description": "En initativ fra Tøyenløftet.",
   "sections": [
     {
       "title": "Veggmaleri",
@@ -9,7 +9,7 @@
         {
           "title": "Veggmaleri 1",
           "slug": "veggmaleri1",
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "description": "Et veldig flott veggmaleri.",
           "location": {
             "lat": 59.913794,
             "lng": 10.765893
@@ -18,7 +18,7 @@
         {
           "title": "Veggmaleri 2",
           "slug": "veggmaleri2",
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "description": "Et veldig flott veggmaleri.",
           "location": {
             "lat": 59.915784,
             "lng": 10.763018
@@ -27,7 +27,7 @@
         {
           "title": "Veggmaleri 3",
           "slug": "veggmaleri3",
-          "description": "<p>Et veldig flott veggmaleri.</p>",
+          "description": "Et veldig flott veggmaleri.",
           "location": {
             "lat": 59.913698,
             "lng": 10.762267
@@ -42,7 +42,7 @@
         {
           "title": "Guerilla blomsterkasser",
           "slug": "blomsterkasser",
-          "description": "<p>Blomsterkasser laget av ....</p>",
+          "description": "Blomsterkasser laget av ....",
           "location": {
             "lat": 59.916225,
             "lng": 10.765336

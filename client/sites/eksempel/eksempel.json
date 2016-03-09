@@ -1,6 +1,6 @@
 {
   "title": "Eksempel",
-  "description": "<p>Eksempel audio guide</p>",
+  "description": "Eksempel audio guide",
   "sections": [
     {
       "title": "Seksjon 1",
@@ -9,7 +9,7 @@
         {
           "title": "Punkt 1",
           "slug": "punkt1",
-          "description": "<p>Beskrivelse</p>",
+          "description": "Beskrivelse",
           "location": {
             "lat": 59.913794,
             "lng": 10.765893
@@ -18,7 +18,7 @@
         {
           "title": "Punkt 2",
           "slug": "punkt2",
-          "description": "<p>Beskrivelse</p>",
+          "description": "Beskrivelse",
           "location": {
             "lat": 59.915784,
             "lng": 10.763018
@@ -27,7 +27,7 @@
         {
           "title": "Punkt 3",
           "slug": "punkt3",
-          "description": "<p>Beskrivelse</p>",
+          "description": "Beskrivelse",
           "location": {
             "lat": 59.913698,
             "lng": 10.762267
@@ -42,7 +42,7 @@
         {
           "title": "Punkt 4",
           "slug": "punkt4",
-          "description": "<p>Beskrivelse</p>",
+          "description": "Beskrivelse",
           "location": {
             "lat": 59.916225,
             "lng": 10.765336
@@ -51,7 +51,7 @@
         {
           "title": "Punkt 5",
           "slug": "punkt5",
-          "description": "<p>Beskrivelse</p>",
+          "description": "Beskrivelse",
           "location": {
             "lat": 59.915203,
             "lng": 10.769842
