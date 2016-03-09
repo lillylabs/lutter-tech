@@ -15,8 +15,9 @@ controller: SightController
   </p>
 </header>
 
-
+<section ng-if="sight.content" class="content">
 <p ng-repeat="part in sight.content">
   <span ng-if="part.type == 'text'" ng-bind="part.text"></span>
   <img ng-if="part.type== 'image'" ng-src="/site/img/{{part.src}}"/>
 </p>
+</section>
