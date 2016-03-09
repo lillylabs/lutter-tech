@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" ng-app="application">
-  <head>
+  <head ng-controller="HeadController">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gatekunst på Tøyen</title>
+    <title ng-bind="title"></title>
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/leaflet.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/leaflet.label.css" rel="stylesheet" type="text/css">
@@ -14,6 +14,14 @@
     <script src="./assets/js/routes.js"></script>
     <script src="./assets/js/leaflet.js"></script>
     <script src="./assets/js/app.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet" type="text/css">
+    <style>
+      body, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Titillium Web', sans-serif !important;
+      }
+    </style>
+
   </head>
   <body>
     <div class="grid-frame vertical medium-horizontal align-right medium-up-2">
