@@ -5,7 +5,28 @@
   font-weight: bold;
 }
 
+.badge {
+  margin-right: 0.5rem;
+  height: $badge-diameter*1.2;
+  width: $badge-diameter*1.2;
+  line-height: $badge-diameter*1.2;
+}
+
+.badge.play {
+  i {
+    margin-left: 0.2rem;
+  }
+}
+
 .grid-frame {
+
+  .player {
+    height: 3.3rem;
+    max-height: 3.3rem;
+    min-height: 3.3rem;
+    background: lightgray;
+    align-items: center;
+  }
 
   .grid-content {
     >header {
@@ -52,13 +73,6 @@
 
 .block-list {
   font-weight: bold;
-
-  .badge {
-    margin-right: 0.5rem;
-    height: $badge-diameter*1.2;
-    width: $badge-diameter*1.2;
-    line-height: $badge-diameter*1.2;
-  }
 }
 
 .content {
