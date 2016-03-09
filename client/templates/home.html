@@ -6,32 +6,32 @@ controller: HomeController
 
 <header>
   <h1 ng-bind="tour.title"></h1>
-  <p ng-bind="tour.description"></p>
+  <p ng-bind="tour.lead"></p>
 </header>
 
-<div class="grid-content">
-  <section class="block-list">
-    <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">
-      <header ng-bind="section.title"></header>
-      <ul>
-        <li ng-repeat="sight in section.sights" class="with-chevron">
-
-          <a ui-sref="sight({ slug: sight.slug })">
-            <span class="badge" style="background-color: {{section.color}}" ng-bind="sight.id"></span>
-            <span ng-bind="sight.title"></span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section ng-if="tour.partners" class="partners">
-    <h2>Partnere: </h2>
+<section class="block-list">
+  <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">
+    <header ng-bind="section.title"></header>
     <ul>
-      <li ng-repeat="partner in tour.partners">
-        <a ng-href="http://www.gravatar.com/avatar/{{partner.url}}">
-        <img ng-src="/site/img/{{partner.logo}}" />
+      <li ng-repeat="sight in section.sights" class="with-chevron">
+
+        <a ui-sref="sight({ slug: sight.slug })">
+          <span class="badge" style="background-color: {{section.color}}" ng-bind="sight.id"></span>
+          <span ng-bind="sight.title"></span>
         </a>
       </li>
     </ul>
-  </section>
-</div>
+  </div>
+</section>
+
+<section ng-if="tour.partners" class="partners">
+  <h1 ng-if="tour.partners.heading" ng-bind="tour.partners.heading"></h1>
+  <p ng-if="tour.partners.lead" ng-bind="tour.partners.lead"></p>
+  <ul>
+    <li ng-repeat="partner in tour.partners.list">
+      <a ng-href="{{partner.url}}">
+      <img ng-src="/site/img/{{partner.logo}}" />
+      </a>
+    </li>
+  </ul>
+</section>
