@@ -10,7 +10,7 @@ angular.module('application').service('DataSource', ['$http', '$q', function($ht
 
   function getData() {
     if(!cache) {
-      return $http.get('/assets/data.json').then(function(result){
+      return $http.get('/site/site.json').then(function(result){
         cache = result.data;
         return cache;
       });

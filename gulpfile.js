@@ -16,10 +16,10 @@ var sequence = require('run-sequence');
 // Check for --production flag
 var isProduction = !!(argv.production);
 
-// Use --dataFile flag
-var data = 'data';
-if(argv.data) {
-  data = argv.data;
+// Use --site flag
+var site = 'eksempel';
+if(argv.site) {
+  site = argv.site;
 };
 
 // 2. FILE PATHS
@@ -29,7 +29,8 @@ var paths = {
   assets: [
     './client/**/*.*',
     '!./client/templates/**/*.*',
-    '!./client/assets/{scss,js,data}/**/*.*'
+    '!./client/sites/**/*.*',
+    '!./client/assets/{scss,js}/**/*.*'
   ],
   // Sass will check these folders for files when you use @import.
   sass: [
@@ -90,11 +91,22 @@ gulp.task('copy', function() {
   ;
 });
 
-// Copies the coorrect data file in the client's data folder
-gulp.task('copy:data', function() {
-  return gulp.src('./client/assets/data/' + data + '.json')
-    .pipe(rename('data.json'))
-    .pipe(gulp.dest("./build/assets"));
+// Copies and renames correct site json
+gulp.task('copy:site-json', function() {
+  return gulp.src('./client/sites/' + site + '/' + site + '.json')
+    .pipe(rename('site.json'))
+    .pipe(gulp.dest('./build/site/'));
+});
+
+// Copies site images
+gulp.task('copy:site-assets', function() {
+  return gulp.src('./client/sites/' + site + '/img/**/*.*')
+    .pipe(gulp.dest('./build/site/img/'))
+  ;
+});
+
+gulp.task('copy:site', function() {
+  sequence(['copy:site-json', 'copy:site-assets']);
 });
 
 // Copies leaflet bower
@@ -208,7 +220,7 @@ gulp.task('server', ['build'], function() {
 
 // Builds your entire app once, without starting a server
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy:data', 'copy:foundation', 'copy:leaflet', 'sass', 'uglify'], 'copy:templates', cb);
+  sequence('clean', ['copy', 'copy:site', 'copy:foundation', 'copy:leaflet', 'sass', 'uglify'], 'copy:templates', cb);
 });
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
@@ -224,4 +236,7 @@ gulp.task('default', ['server'], function () {
 
   // Watch app templates
   gulp.watch(['./client/templates/**/*.html'], ['copy:templates']);
+
+  // Watch app site
+  gulp.watch(['./client/sites/**/*.*'], ['copy:site']);
 });

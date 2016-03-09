@@ -1,6 +1,12 @@
 {
-  "title": "Øya Sanna",
+  "title": "Steinalder på Sanna",
   "description": "<p>En audioguide i fem deler.</p>",
+  "fundedBy": [
+    {
+      "name": "Tenk Træna",
+      "logo": "tenk-traena-logo.jpg"
+    }
+  ],
   "center": {
     "lat": 66.504603,
     "lng": 12.058286,
@@ -13,7 +19,7 @@
   },
   "sections": [
     {
-      "color": "#FF5722",
+      "color": "#009999",
       "sights": [
         {
           "title": "Punkt 1",
