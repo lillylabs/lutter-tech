@@ -5,20 +5,33 @@ controller: HomeController
 ---
 
 <header>
-  <h3 ng-bind="tour.title"></h3>
-<!--  <div ng-bind-html="tour.description"></div>-->
+  <h1 ng-bind="tour.title"></h1>
+  <p ng-bind="tour.description"></p>
 </header>
 
-<section class="grid-content block-list">
-  <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">
-    <header ng-bind="section.title"></header>
+<div class="grid-content">
+  <section class="block-list">
+    <div ng-repeat="section in tour.sections" class="tour-section-{{ $index }}">
+      <header ng-bind="section.title"></header>
+      <ul>
+        <li ng-repeat="sight in section.sights" class="with-chevron">
+
+          <a ui-sref="sight({ slug: sight.slug })">
+            <span class="badge" style="background-color: {{section.color}}" ng-bind="sight.id"></span>
+            <span ng-bind="sight.title"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section ng-if="tour.partners" class="partners">
+    <h2>Partnere: </h2>
     <ul>
-      <li ng-repeat="sight in section.sights" class="with-chevron">
-        <a ui-sref="sight({ slug: sight.slug })">
-          <span class="badge" style="background-color: {{section.color}}" ng-bind="sight.id"></span>
-          <span ng-bind="sight.title"></span>
+      <li ng-repeat="partner in tour.partners">
+        <a ng-href="http://www.gravatar.com/avatar/{{partner.url}}">
+        <img ng-src="/site/img/{{partner.logo}}" />
         </a>
       </li>
     </ul>
-  </div>
-</section>
+  </section>
+</div>
