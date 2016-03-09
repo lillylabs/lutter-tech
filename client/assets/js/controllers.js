@@ -95,4 +95,11 @@ angular.module('application')
 //    }
 //    console.log("--- MARKER ----");
 
-   }]);
+   }])
+  .controller('HeadController', [ '$scope', '$http', 'DataSource',  function($scope, $http, DataSource) {
+
+    DataSource.getAudioTour().then(function(tour) {
+      $scope.title = tour.title;
+    });
+
+  }]);

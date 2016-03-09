@@ -1,6 +1,10 @@
 @import "settings";
 @import "foundation";
 
+.button {
+  font-weight: bold;
+}
+
 .grid-frame {
 
   >.grid-block {
@@ -18,10 +22,6 @@
 
     >nav, >header {
       padding: 1rem;
-    }
-
-    .block-list {
-      margin-top: -1rem;
     }
   }
 
@@ -50,11 +50,30 @@
 }
 
 .block-list {
-  span {
+  font-weight: bold;
+
+  .badge {
     margin-right: 0.5rem;
-    font-weight: bold;
     height: $badge-diameter*1.2;
     width: $badge-diameter*1.2;
     line-height: $badge-diameter*1.2;
+  }
+}
+
+.partners {
+  ul {
+    margin: 0 -1rem;
+    list-style: none;
+    li {
+      display:inline-block;
+      padding: 0 1rem;
+      max-width: 50%;
+
+      img {
+        width: 150px;
+        max-width: 100%;
+      }
+    }
+
   }
 }

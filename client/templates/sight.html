@@ -5,9 +5,22 @@ controller: SightController
 ---
 
 <nav>
-  <a ui-sref="home">&larr; Tilbake til oversikten</a>
+  <a ui-sref="home">&larr; Tilbake</a>
 </nav>
+
 <section class="grid-content">
-  <h3 ng-bind="sight.title"></h3>
-<!--  <div ng-bind-html="sight.description"></div>-->
+  <header>
+  <h1 ng-bind="sight.title"></h1>
+  <p ng-bind="sight.description"></p>
+</header>
+  <p ng-if="sight.img">
+    <img ng-src="/site/img/{{sight.img}}" />
+  </p>
+  <p>
+    <button class="button" zf-popup-toggle="popup">Spill "<span ng-bind="sight.title"></span>"</button>
+    <zf-popup id="popup" class="padding">
+      Vi jobber med saken.
+    </zf-popup>
+  </p>
+
 </section>
