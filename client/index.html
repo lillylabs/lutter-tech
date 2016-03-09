@@ -24,14 +24,17 @@
 
   </head>
   <body>
-    <div class="grid-frame vertical medium-horizontal align-right medium-up-2">
-      <div class="grid-block" ng-controller="MapController">
-        <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
-      </div>
+    <div class="grid-frame vertical medium-horizontal">
 
-      <main ui-view class="grid-block vertical">
+        <div class="grid-block medium-5 large-4 vertical order-2 medium-order-1">
+          <main ui-view class="grid-content"></main>
+          <div class="player grid-block">
+          </div>
+        </div>
 
-      </main>
+        <div class="grid-block medium-7 large-8 order-1 medium-order-2" ng-controller="MapController">
+          <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
+        </div>
 
     </div>
   </body>

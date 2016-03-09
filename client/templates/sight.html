@@ -3,24 +3,23 @@ name: sight
 url: /sight/:slug
 controller: SightController
 ---
-
 <nav>
-  <a ui-sref="home">&larr; Tilbake</a>
+  <a ui-sref="home" class="close-button">×</a>
 </nav>
 
-<section class="grid-content">
-  <header>
+<header>
   <h1 ng-bind="sight.title"></h1>
-  <p ng-bind="sight.description"></p>
-</header>
-  <p ng-if="sight.img">
-    <img ng-src="/site/img/{{sight.img}}" />
-  </p>
+  <p ng-bind="sight.lead"></p>
   <p>
-    <button class="button" zf-popup-toggle="popup">Spill "<span ng-bind="sight.title"></span>"</button>
-    <zf-popup id="popup" class="padding">
+    <button class="button expand" zf-popup-toggle="audio-popup">Spill "<span ng-bind="sight.title"></span>"</button>
+    <zf-popup id="audio-popup" class="padding">
       Vi jobber med saken.
     </zf-popup>
   </p>
+</header>
 
-</section>
+
+<p ng-repeat="part in sight.content">
+  <span ng-if="part.type == 'text'" ng-bind="part.text"></span>
+  <img ng-if="part.type== 'image'" ng-src="/site/img/{{part.src}}"/>
+</p>
