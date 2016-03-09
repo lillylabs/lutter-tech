@@ -1,18 +1,22 @@
 {
   "title": "Steinalder på Sanna",
-  "description": "En audioguide i fem deler.",
-  "partners": [
-    {
-      "name": "Tenk Træna",
-      "logo": "tenk-traena-logo.jpg",
-      "url":  "http://www.tenktraena.no/"
-    },
-    {
-      "name": "Helgeland museum",
-      "logo": "helgeland-museum-logo.jpg",
-      "url":  "http://helgelandmuseum.no/"
-    }
-  ],
+  "lead": "En audioguide i fem deler.",
+  "partners": {
+    "heading": "",
+    "lead": "Et samarbeid mellom:",
+    "list": [
+      {
+        "name": "Tenk Træna",
+        "logo": "tenk-traena-logo.jpg",
+        "url":  "http://www.tenktraena.no/"
+      },
+      {
+        "name": "Helgeland museum",
+        "logo": "helgeland-museum-logo.jpg",
+        "url":  "http://helgelandmuseum.no/"
+      }
+    ]
+  },
   "font": [
     {
       "family": "'Titillium Web', sans-serif",
@@ -40,50 +44,118 @@
         {
           "title": "Punkt 1",
           "slug": "punkt1",
-          "description": "Beskrivelse",
-          "img": "kirkhelleren.jpg",
+          "lead": "Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum.",
           "location": {
             "lat": 66.506498,
             "lng": 12.057010
-          }
+          },
+          "audio": "kaffegutta.mp3",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor nec lacus sit amet tempor. Nunc leo neque, lacinia at suscipit vitae, placerat at lorem. Duis placerat porttitor elit ut dignissim. Donec scelerisque, justo nec convallis condimentum, tellus diam consectetur est, in facilisis ante lorem eu tellus. Pellentesque dictum tortor non condimentum posuere. Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum."
+            },
+            {
+              "type": "image",
+              "src": "kirkhelleren.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Proin luctus odio consequat, posuere lacus quis, ultrices dolor. Praesent eget elit in turpis mattis auctor in eu sapien. Aliquam eros diam, efficitur ut varius nec, rhoncus id libero. Aliquam id fringilla lacus. Morbi mauris leo, tincidunt sed mauris sodales, auctor condimentum nunc. In lectus dolor, consectetur vitae egestas vel, iaculis eget libero. Suspendisse non velit ornare, lobortis justo non, consequat risus."
+            }
+          ]
         },
         {
           "title": "Punkt 2",
           "slug": "punkt2",
-          "description": "Beskrivelse",
-          "img": "avlang.jpg",
+          "lead": "Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum.",
           "location": {
             "lat": 66.503357,
             "lng": 12.056979
-          }
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "avlang.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Proin luctus odio consequat, posuere lacus quis, ultrices dolor. Praesent eget elit in turpis mattis auctor in eu sapien. Aliquam eros diam, efficitur ut varius nec, rhoncus id libero. Aliquam id fringilla lacus. Morbi mauris leo, tincidunt sed mauris sodales, auctor condimentum nunc. In lectus dolor, consectetur vitae egestas vel, iaculis eget libero. Suspendisse non velit ornare, lobortis justo non, consequat risus."
+            },
+            {
+              "type": "text",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor nec lacus sit amet tempor. Nunc leo neque, lacinia at suscipit vitae, placerat at lorem. Duis placerat porttitor elit ut dignissim. Donec scelerisque, justo nec convallis condimentum, tellus diam consectetur est, in facilisis ante lorem eu tellus. Pellentesque dictum tortor non condimentum posuere. Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum."
+            }
+          ]
         },
         {
           "title": "Punkt 3",
           "slug": "punkt3",
-          "description": "Beskrivelse",
-          "img": "sanna-traena.jpg",
+          "lead": "Beskrivelse",
           "location": {
             "lat": 66.502645,
             "lng": 12.054496
-          }
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "sanna-traena.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Proin luctus odio consequat, posuere lacus quis, ultrices dolor. Praesent eget elit in turpis mattis auctor in eu sapien. Aliquam eros diam, efficitur ut varius nec, rhoncus id libero. Aliquam id fringilla lacus. Morbi mauris leo, tincidunt sed mauris sodales, auctor condimentum nunc. In lectus dolor, consectetur vitae egestas vel, iaculis eget libero. Suspendisse non velit ornare, lobortis justo non, consequat risus."
+            },
+            {
+              "type": "text",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor nec lacus sit amet tempor. Nunc leo neque, lacinia at suscipit vitae, placerat at lorem. Duis placerat porttitor elit ut dignissim. Donec scelerisque, justo nec convallis condimentum, tellus diam consectetur est, in facilisis ante lorem eu tellus. Pellentesque dictum tortor non condimentum posuere. Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum."
+            },
+            {
+              "type": "image",
+              "src": "avlang.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Proin luctus odio consequat, posuere lacus quis, ultrices dolor. Praesent eget elit in turpis mattis auctor in eu sapien. Aliquam eros diam, efficitur ut varius nec, rhoncus id libero. Aliquam id fringilla lacus. Morbi mauris leo, tincidunt sed mauris sodales, auctor condimentum nunc. In lectus dolor, consectetur vitae egestas vel, iaculis eget libero. Suspendisse non velit ornare, lobortis justo non, consequat risus."
+            }
+          ]
         },
         {
           "title": "Punkt 4",
           "slug": "punkt4",
-          "description": "Beskrivelse",
+          "lead": "Beskrivelse",
           "location": {
             "lat": 66.503512,
             "lng": 12.059343
-          }
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "sanna-traena.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Proin luctus odio consequat, posuere lacus quis, ultrices dolor. Praesent eget elit in turpis mattis auctor in eu sapien. Aliquam eros diam, efficitur ut varius nec, rhoncus id libero. Aliquam id fringilla lacus. Morbi mauris leo, tincidunt sed mauris sodales, auctor condimentum nunc. In lectus dolor, consectetur vitae egestas vel, iaculis eget libero. Suspendisse non velit ornare, lobortis justo non, consequat risus."
+            },
+            {
+              "type": "image",
+              "src": "kirkhelleren.jpg"
+            }
+          ]
         },
         {
           "title": "Punkt 5",
           "slug": "punkt5",
-          "description": "Beskrivelse",
+          "lead": "Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum.",
           "location": {
             "lat": 66.502287,
             "lng": 12.058642
-          }
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "avlang.jpg"
+            }
+          ]
         }
       ]
     }

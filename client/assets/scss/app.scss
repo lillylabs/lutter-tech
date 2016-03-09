@@ -5,24 +5,46 @@
   font-weight: bold;
 }
 
+.badge {
+  margin-right: 0.5rem;
+  height: $badge-diameter*1.2;
+  width: $badge-diameter*1.2;
+  line-height: $badge-diameter*1.2;
+}
+
+.badge.play {
+  i {
+    margin-left: 0.2rem;
+  }
+}
+
 .grid-frame {
+
+  .player {
+    height: 3.3rem;
+    max-height: 3.3rem;
+    min-height: 3.3rem;
+    background: lightgray;
+    align-items: center;
+  }
+
+  .grid-content {
+    >header {
+      margin: 2rem 0;
+    }
+  }
 
   >.grid-block {
 
-    position: relative;
-
     &:first-child {
-      min-height: 30%;
+      min-height: 70%;
       padding: 0;
     }
 
     &:last-child {
-      min-height: 70%;
+      min-height: 30%;
     }
 
-    >nav, >header {
-      padding: 1rem;
-    }
   }
 
   .angular-leaflet-map {
@@ -51,26 +73,31 @@
 
 .block-list {
   font-weight: bold;
+}
 
-  .badge {
-    margin-right: 0.5rem;
-    height: $badge-diameter*1.2;
-    width: $badge-diameter*1.2;
-    line-height: $badge-diameter*1.2;
+.content {
+  img {
+    width: 100%;
   }
 }
 
 .partners {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: $h4-font-size;
+  }
+
   ul {
-    margin: 0 -1rem;
+    margin: -1rem -1rem 0 -1rem;
     list-style: none;
     li {
       display:inline-block;
-      padding: 0 1rem;
+      padding: 1rem;
       max-width: 50%;
 
       img {
-        width: 150px;
+        width: 100px;
         max-width: 100%;
       }
     }
