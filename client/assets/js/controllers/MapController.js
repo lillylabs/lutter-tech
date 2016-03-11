@@ -1,25 +1,4 @@
 angular.module('application')
-  .controller('HomeController', [ '$scope', '$http', 'DataSource',  function($scope, $http, DataSource) {
-
-    DataSource.getAudioTour().then(function(tour) {
-      $scope.tour = tour;
-    });
-
-  }])
-
-  .controller('SightController', [ '$scope',  '$state', '$http', 'DataSource',  function($scope, $state, $http, DataSource) {
-
-    var slug = ($state.params.slug);
-    if(!slug) {
-      return;
-    }
-
-    DataSource.getSight(slug).then(function(sight) {
-      $scope.sight = sight;
-    });
-
-  }])
-
   .controller('MapController', [ '$scope', '$state', '$http', 'DataSource', 'leafletMapEvents', 'leafletMarkerEvents', function($scope, $state, $http, DataSource, leafletMapEvents, leafletMarkerEvents) {
 
     angular.extend($scope, {
@@ -73,10 +52,3 @@ angular.module('application')
     });
 
    }])
-  .controller('HeadController', [ '$scope', '$http', 'DataSource',  function($scope, $http, DataSource) {
-
-    DataSource.getAudioTour().then(function(tour) {
-      $scope.title = tour.title;
-    });
-
-  }]);
