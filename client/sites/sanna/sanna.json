@@ -49,7 +49,7 @@
             "lat": 66.506498,
             "lng": 12.057010
           },
-          "audio": "kaffegutta.mp3",
+          "audio": "brugata.mp3",
           "content": [
             {
               "type": "text",
@@ -68,6 +68,7 @@
         {
           "title": "Punkt 2",
           "slug": "punkt2",
+          "audio": "kaffegutta.mp3",
           "lead": "Suspendisse eu lectus urna. Curabitur vestibulum et neque malesuada bibendum.",
           "location": {
             "lat": 66.503357,
@@ -96,6 +97,7 @@
             "lat": 66.502645,
             "lng": 12.054496
           },
+          "audio": "mercedesdeler.mp3",
           "content": [
             {
               "type": "image",
@@ -127,6 +129,7 @@
             "lat": 66.503512,
             "lng": 12.059343
           },
+          "audio": "sidsel_trikketur.mp3",
           "content": [
             {
               "type": "image",
@@ -150,6 +153,7 @@
             "lat": 66.502287,
             "lng": 12.058642
           },
+          "audio": "storgata.mp3",
           "content": [
             {
               "type": "image",

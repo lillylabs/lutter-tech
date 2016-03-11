@@ -29,10 +29,10 @@
 
         <div class="grid-block medium-5 large-4 vertical order-2 medium-order-1">
           <main ui-view class="grid-content"></main>
-          <div class="player grid-block">
-            <div class="grid-content">Punkt 3 (pauset)</div>
+          <div class="player grid-block" ng-controller="PlayerController">
+            <div class="grid-content"><span ng-bind="currentTrack.title"></span></div>
             <div class="grid-content shrink">
-              <span class="badge play"><i class="fa fa-play"></i></span>
+              <button class="default badge" ng-click="playpause()"><i class="fa" ng-class="{'fa-play':audio.paused, 'fa-pause':!audio.paused}"></i></button>
             </div>
           </div>
         </div>
