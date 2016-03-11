@@ -32,6 +32,10 @@ var paths = {
     '!./client/sites/**/*.*',
     '!./client/assets/{scss,js}/**/*.*'
   ],
+  siteAssets: [
+    './client/sites/' + site + '/**/*.*',
+    './client/sites/' + site + '/*.json',
+  ],
   // Sass will check these folders for files when you use @import.
   sass: [
     'client/assets/scss',
@@ -69,8 +73,8 @@ var paths = {
   // These files are for your app's JavaScript
   appJS: [
     'client/assets/js/app.js',
-    'client/assets/js/services.js',
-    'client/assets/js/controllers.js'
+    'client/assets/js/controllers/*.js',
+    'client/assets/js/services/*.js'
   ]
 }
 
@@ -87,8 +91,7 @@ gulp.task('copy', function() {
   return gulp.src(paths.assets, {
     base: './client/'
   })
-  .pipe(gulp.dest('./build'))
-  ;
+  .pipe(gulp.dest('./build'));
 });
 
 // Copies and renames correct site json
@@ -100,9 +103,10 @@ gulp.task('copy:site-json', function() {
 
 // Copies site images
 gulp.task('copy:site-assets', function() {
-  return gulp.src('./client/sites/' + site + '/img/**/*.*')
-    .pipe(gulp.dest('./build/site/img/'))
-  ;
+  return gulp.src(paths.siteAssets, {
+    base: './client/sites/' + site
+  })
+  .pipe(gulp.dest('./build/site/'));
 });
 
 gulp.task('copy:site', function() {

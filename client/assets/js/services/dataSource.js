@@ -51,6 +51,6 @@ angular.module('application').service('DataSource', ['$http', '$q', function($ht
 
   return {
     getAudioTour: getAudioTour,
-    getSight: getSight
+    getSight: getSight,
   };
 }]);

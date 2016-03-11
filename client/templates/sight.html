@@ -11,7 +11,7 @@ controller: SightController
   <h1 ng-bind="sight.title"></h1>
   <p ng-bind="sight.lead"></p>
   <p>
-    <button class="button expand">Spill "<span ng-bind="sight.title"></span>"</button>
+    <button class="button expand" ng-click="play()">Spill "<span ng-bind="sight.title"></span>"</button>
   </p>
 </header>
 
