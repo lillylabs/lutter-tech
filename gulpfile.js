@@ -70,7 +70,7 @@ var paths = {
   appJS: [
     'client/assets/js/app.js',
     'client/assets/js/controllers/*.js',
-    'client/assets/js/services.js'
+    'client/assets/js/services/*.js'
   ]
 }
 
