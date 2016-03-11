@@ -116,3 +116,31 @@
 
   }
 }
+
+.status {
+  padding: 3rem;
+  padding-top: 2rem;
+
+  table {
+    margin: 0 -0.5rem;
+  }
+
+  td, th {
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  tr:nth-child(even) {
+    background: #EEE;
+  }
+
+  th {
+    font-size: 1.2rem;
+  }
+
+  td.section-row {
+    padding-top: 1rem;
+    font-weight: bold;
+    background: white;
+  }
+}
