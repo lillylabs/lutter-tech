@@ -12,12 +12,6 @@ controller: SightController
   <button class="button" ng-click="playPause()">
     <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
   </button>
-  <p ng-bind="sight.lead"></p>
 </header>
 
-<section ng-if="sight.content" class="content">
-<p ng-repeat="part in sight.content">
-  <span ng-if="part.type == 'text'" ng-bind="part.text"></span>
-  <img ng-if="part.type== 'image'" ng-src="/site/img/{{part.src}}"/>
-</p>
-</section>
+<section marked ng-include="sight.content" class="content">

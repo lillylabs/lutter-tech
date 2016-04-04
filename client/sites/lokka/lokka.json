@@ -1,6 +1,6 @@
 {
   "title": "En historisk tur fra sentrum til Torshov",
-  "lead": "Lydklippene følger trikkesporet fra Brugata til Thorsov. Ønsker du en audioguide (lyd + teknologi) som denne ta kontakt med Lutter Øre.",
+  "lead": "Lydklippene følger trikkesporet fra **Brugata** til **Thorsov**.  \nØnsker du en audioguide (lyd + teknologi) som denne ta kontakt med Lutter Øre.",
   "partners": {
     "heading": "",
     "lead": "Et samarbeid mellom:",
@@ -38,19 +38,15 @@
         {
           "title": "Storgata",
           "slug": "storgata",
-          "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend risus id dolor mollis, vel porta metus ultricies. Nam sagittis neque egestas dictum rhoncus.",
           "location": {
             "lat": 59.9137503,
             "lng": 10.750747199999978
-          },
-          "audio": "storgata.mp3",
-          "content": []
+          }
         },
         {
           "title": "Brugata",
           "slug": "brugata",
           "audio": "brugata.mp3",
-          "lead": "",
           "location": {
             "lat": 59.91427573019375,
             "lng": 10.754032731056213
@@ -60,57 +56,42 @@
         {
           "title": "Intervju med Sidsel",
           "slug": "sidsel",
-          "lead": "",
           "location": {
             "lat": 59.91959885169308,
             "lng": 10.758257624328621
-          },
-          "audio": "sidsel-trikketur.mp3",
-          "content": []
+          }
         },
         {
           "title": "Løken",
           "slug": "loken",
-          "lead": "",
           "location": {
             "lat": 59.9238678,
             "lng": 10.757842299999993
-          },
-          "audio": "loken.mp3",
-          "content": []
+          }
         },
         {
           "title": "Mercedesdeler i kirken",
           "slug": "mercedesdeler",
-          "lead": "",
           "location": {
             "lat": 59.926353,
             "lng": 10.757923000000005
-          },
-          "audio": "mercedesdeler.mp3",
-          "content": []
+          }
         },
         {
           "title": "Eiendomsmegler",
           "slug": "eiendomsmegler",
-          "lead": "",
           "location": {
             "lat": 59.93042018926602,
             "lng": 10.761151313781738
-          },
-          "audio": "eiendomsmegler.mp3",
-          "content": []
+          }
         },
         {
           "title": "Kaffegutta",
           "slug": "kaffegutta",
-          "lead": "",
           "location": {
             "lat": 59.935819,
             "lng": 10.764870999999971
-          },
-          "audio": "kaffegutta.mp3",
-          "content": []
+          }
         }
       ]
     }

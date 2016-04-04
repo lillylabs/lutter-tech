@@ -11,6 +11,7 @@ angular.module('application')
     $scope.isPaused = !AudioPlayer.isPlayingTrack(slug);
 
     DataSource.getSight(slug).then(function(sight) {
+      sight.content = '/site/markdown/' + sight.slug + '.md';
       $scope.sight = sight;
     });
 
