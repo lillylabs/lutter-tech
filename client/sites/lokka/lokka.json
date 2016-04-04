@@ -46,12 +46,10 @@
         {
           "title": "Brugata",
           "slug": "brugata",
-          "audio": "brugata.mp3",
           "location": {
             "lat": 59.91427573019375,
             "lng": 10.754032731056213
-          },
-          "content": []
+          }
         },
         {
           "title": "Intervju med Sidsel",

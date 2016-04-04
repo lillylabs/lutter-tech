@@ -7,7 +7,7 @@ angular.module('application')
     var playTrack = function(slug) {
       DataSource.getSight(slug).then(function(sight) {
         currentTrack = slug;
-        audio.src = '/site/audio/' + sight.slug + '.mp3';
+        audio.src = DataSource.getAudioForSight(sight);
         audio.play();
       });
     }
