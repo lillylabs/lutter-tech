@@ -4,15 +4,15 @@ url: /sight/:slug
 controller: SightController
 ---
 <nav>
-  <a ui-sref="home" class="close-button">×</a>
+  <a ui-sref="home"><i class="fa fa-times"></i></a>
 </nav>
 
 <header>
   <h1 ng-bind="sight.title"></h1>
+  <button class="button" ng-click="playPause()">
+    <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
+  </button>
   <p ng-bind="sight.lead"></p>
-  <p>
-    <button class="button expand" ng-click="play()">Spill "<span ng-bind="sight.title"></span>"</button>
-  </p>
 </header>
 
 <section ng-if="sight.content" class="content">

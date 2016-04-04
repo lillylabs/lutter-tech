@@ -38,7 +38,7 @@
         {
           "title": "Storgata",
           "slug": "storgata",
-          "lead": "",
+          "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend risus id dolor mollis, vel porta metus ultricies. Nam sagittis neque egestas dictum rhoncus.",
           "location": {
             "lat": 59.9137503,
             "lng": 10.750747199999978

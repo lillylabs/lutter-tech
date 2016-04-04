@@ -29,22 +29,10 @@
 
   </head>
   <body>
-    <div class="grid-frame vertical medium-horizontal">
+      <div class="map" ng-controller="MapController">
+        <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
+      </div>
 
-        <div class="grid-block medium-5 large-4 vertical order-2 medium-order-1">
-          <main ui-view class="grid-content"></main>
-          <div class="player grid-block" ng-controller="PlayerController">
-            <div class="grid-content"><span ng-bind="currentTrack.title"></span></div>
-            <div class="grid-content shrink">
-              <button class="default badge" ng-click="playpause()"><i class="fa" ng-class="{'fa-play':audio.paused, 'fa-pause':!audio.paused}"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-block medium-7 large-8 order-1 medium-order-2" ng-controller="MapController">
-          <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
-        </div>
-
-    </div>
+      <main class="main" ui-view></main>
   </body>
 </html>
