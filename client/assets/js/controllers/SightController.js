@@ -1,19 +1,39 @@
 angular.module('application')
-  .controller('SightController', [ '$scope', '$rootScope',  '$state', '$http', 'DataSource',  function($scope, $rootScope, $state, $http, DataSource) {
+  .controller('SightController', [ '$scope', '$rootScope',  '$state', '$http', 'DataSource', 'AudioPlayer',  function($scope, $rootScope, $state, $http, DataSource, AudioPlayer) {
+
+    $scope.isPaused = true;
 
     var slug = ($state.params.slug);
     if(!slug) {
       return;
     }
 
-    $scope.play = function() {
-      $rootScope.$broadcast('audio.play', slug);
-    }
+    $scope.isPaused = !AudioPlayer.isPlayingTrack(slug);
 
     DataSource.getSight(slug).then(function(sight) {
       $scope.sight = sight;
     });
 
+    $scope.playPause = function() {
+      $rootScope.$broadcast('audio.playPause', slug);
+    }
 
+    $rootScope.$on('audio.ended', function(r, date){
+      $scope.$apply(function () {
+        $scope.isPaused = true;
+      });
+    });
+
+    $rootScope.$on('audio.paused', function(r, date){
+      $scope.$apply(function () {
+        $scope.isPaused = true;
+      });
+    });
+
+    $rootScope.$on('audio.played', function(r, date){
+      $scope.$apply(function () {
+        $scope.isPaused = false;
+      });
+    });
 
   }])
