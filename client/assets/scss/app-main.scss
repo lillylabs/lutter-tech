@@ -1,0 +1,60 @@
+main {
+
+  nav {
+    button {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  header {
+    h1, button {
+      display: inline-block;
+    }
+
+    h1 {
+      margin-right: 1rem;
+    }
+  }
+
+  .block-list {
+    font-weight: bold;
+
+    .badge {
+      margin-right: 0.5rem;
+      height: $badge-diameter*1.2;
+      width: $badge-diameter*1.2;
+      line-height: $badge-diameter*1.2;
+    }
+  }
+
+  .content {
+    img {
+      width: 100%;
+    }
+  }
+
+  .partners {
+    margin-top: 2rem;
+
+    h2 {
+      font-size: $h4-font-size;
+    }
+
+    ul {
+      margin: -1rem -1rem 0 -1rem;
+      list-style: none;
+      li {
+        display:inline-block;
+        padding: 1rem;
+        max-width: 50%;
+
+        img {
+          width: 100px;
+          max-width: 100%;
+        }
+      }
+
+    }
+  }
+}
