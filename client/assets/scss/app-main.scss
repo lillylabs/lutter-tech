@@ -26,16 +26,34 @@ main {
   .block-list {
     font-weight: bold;
 
+    li::after {
+      margin-top: -2px;
+    }
+
+    a {
+      padding-right: 5rem;
+      padding-left: $badge-diameter*2.5;
+      display: flex;
+      align-items: center;
+      min-height: 3.5rem;
+      line-height: 1.2;
+    }
+
     .badge {
-      margin-right: 0.5rem;
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
       height: $badge-diameter*1.2;
       width: $badge-diameter*1.2;
-      line-height: $badge-diameter*1.2;
     }
 
     .button {
-      float: right;
-      margin-right: 1.5rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
       color: white;
       background: #cdcdcd;
 
