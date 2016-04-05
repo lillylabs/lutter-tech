@@ -49,8 +49,28 @@ angular.module('application').service('DataSource', ['$http', '$q', function($ht
     });
   }
 
+  function getAudioForSight(sight) {
+    var slug = sight.audio;
+    if(!slug) {
+      slug = sight.slug;
+    }
+
+    return '/site/audio/' + slug + '.mp3';
+  }
+
+  function getContentForSight(sight) {
+    var slug = sight.content;
+    if(!slug) {
+      slug = sight.slug;
+    }
+
+    return '/site/markdown/' + slug + '.md';
+  }
+
   return {
     getAudioTour: getAudioTour,
     getSight: getSight,
+    getAudioForSight: getAudioForSight,
+    getContentForSight: getContentForSight
   };
 }]);

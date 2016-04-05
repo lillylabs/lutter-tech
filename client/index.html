@@ -2,8 +2,12 @@
 <html lang="en" ng-app="application">
   <head ng-controller="HeadController">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title ng-bind="title"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/leaflet.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/leaflet.label.css" rel="stylesheet" type="text/css">
@@ -14,6 +18,7 @@
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
     <script src="./assets/js/leaflet.js"></script>
+    <script src="./assets/js/marked.js"></script>
     <script src="./assets/js/app.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet" type="text/css">
@@ -25,22 +30,12 @@
 
   </head>
   <body>
-    <div class="grid-frame vertical medium-horizontal">
+      <div class="map-container" ng-controller="MapController">
+        <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
+      </div>
 
-        <div class="grid-block medium-5 large-4 vertical order-2 medium-order-1">
-          <main ui-view class="grid-content"></main>
-          <div class="player grid-block" ng-controller="PlayerController">
-            <div class="grid-content"><span ng-bind="currentTrack.title"></span></div>
-            <div class="grid-content shrink">
-              <button class="default badge" ng-click="playpause()"><i class="fa" ng-class="{'fa-play':audio.paused, 'fa-pause':!audio.paused}"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-block medium-7 large-8 order-1 medium-order-2" ng-controller="MapController">
-          <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
-        </div>
-
-    </div>
+      <div class="main-container">
+        <main class="main" ui-view></main>
+      </div>
   </body>
 </html>

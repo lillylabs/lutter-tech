@@ -1,37 +1,36 @@
 {
   "title": "Eksempel",
-  "description": "Eksempel audio guide",
   "sections": [
     {
       "title": "Seksjon 1",
       "color": "#FF5722",
       "sights": [
         {
-          "title": "Punkt 1",
+          "title": "Eksempel punkt",
           "slug": "punkt1",
-          "description": "Beskrivelse",
           "location": {
             "lat": 59.913794,
             "lng": 10.765893
-          }
+          },
+          "content": "eksempel"
         },
         {
-          "title": "Punkt 2",
+          "title": "Eksempel punkt",
           "slug": "punkt2",
-          "description": "Beskrivelse",
           "location": {
             "lat": 59.915784,
             "lng": 10.763018
-          }
+          },
+          "content": "eksempel"
         },
         {
-          "title": "Punkt 3",
+          "title": "Eksempel punkt",
           "slug": "punkt3",
-          "description": "Beskrivelse",
           "location": {
             "lat": 59.913698,
             "lng": 10.762267
-          }
+          },
+          "content": "eksempel"
         }
       ]
     },
@@ -40,22 +39,22 @@
       "color": "#01579B",
       "sights": [
         {
-          "title": "Punkt 4",
+          "title": "Eksempel punkt",
           "slug": "punkt4",
-          "description": "Beskrivelse",
           "location": {
             "lat": 59.916225,
             "lng": 10.765336
-          }
+          },
+          "content": "eksempel"
         },
         {
-          "title": "Punkt 5",
+          "title": "Eksempel punkt",
           "slug": "punkt5",
-          "description": "Beskrivelse",
           "location": {
             "lat": 59.915203,
             "lng": 10.769842
-          }
+          },
+          "content": "eksempel"
         }
       ]
     }

@@ -1,0 +1,17 @@
+.angular-leaflet-map {
+
+  .leaflet-control-attribution {
+    display: none;
+  }
+
+  .leaflet-marker-icon span {
+    font-weight: bold;
+  }
+
+  .badge {
+    font-weight: bold;
+    font-size: $badge-fontsize*1.5;
+    height: $badge-diameter*1.2;
+    width: $badge-diameter*1.2;
+  }
+}

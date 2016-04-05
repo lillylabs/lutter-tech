@@ -4,20 +4,16 @@ url: /sight/:slug
 controller: SightController
 ---
 <nav>
-  <a ui-sref="home" class="close-button">×</a>
+  <span class="badge" ng-bind="sight.id"></span>
+  <a ui-sref="home"><i class="fa fa-times"></i></a>
 </nav>
 
 <header>
   <h1 ng-bind="sight.title"></h1>
-  <p ng-bind="sight.lead"></p>
-  <p>
-    <button class="button expand" ng-click="play()">Spill "<span ng-bind="sight.title"></span>"</button>
-  </p>
 </header>
 
-<section ng-if="sight.content" class="content">
-<p ng-repeat="part in sight.content">
-  <span ng-if="part.type == 'text'" ng-bind="part.text"></span>
-  <img ng-if="part.type== 'image'" ng-src="/site/img/{{part.src}}"/>
-</p>
-</section>
+<button class="button expand" ng-click="playPause()">
+  <i class="fa" ng-class="{'fa-play':!isPlaying(), 'fa-pause':isPlaying()}"></i>
+</button>
+
+<section marked ng-include="sight.contentSrc" class="content">

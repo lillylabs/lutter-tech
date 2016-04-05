@@ -1,0 +1,99 @@
+main {
+
+  padding: 1rem;
+  position: relative;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    .badge, a {
+      position: absolute;
+      font-weight: bold;
+    }
+
+    a {
+      right: 1rem;
+    }
+  }
+
+  header {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .block-list {
+    font-weight: bold;
+
+    li::after {
+      margin-top: -2px;
+    }
+
+    a {
+      padding-right: 5rem;
+      padding-left: $badge-diameter*2.5;
+      display: flex;
+      align-items: center;
+      min-height: 3.5rem;
+      line-height: 1.2;
+    }
+
+    .badge {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      height: $badge-diameter*1.2;
+      width: $badge-diameter*1.2;
+    }
+
+    .button {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      background: #cdcdcd;
+
+      &.pause {
+        background: $primary-color;
+      }
+
+      &:hover, &:focus {
+        color: white;
+      }
+    }
+  }
+
+  .content {
+    img {
+      width: 100%;
+    }
+  }
+
+  .partners {
+    margin-top: 2rem;
+
+    h2 {
+      font-size: $h4-font-size;
+    }
+
+    ul {
+      margin: -1rem -1rem 0 -1rem;
+      list-style: none;
+      li {
+        display:inline-block;
+        padding: 1rem;
+        max-width: 50%;
+
+        img {
+          width: 100px;
+          max-width: 100%;
+        }
+      }
+
+    }
+  }
+}

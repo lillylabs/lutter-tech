@@ -55,6 +55,11 @@ var paths = {
     'bower_components/foundation-apps/js/angular/**/*.js',
     '!bower_components/foundation-apps/js/angular/app.js'
   ],
+  // These files include markdown support
+  markedJS: [
+    'bower_components/marked/lib/marked.js',
+    'bower_components/angular-marked/dist/angular-marked.js',
+  ],
   // These files include leaflet javascript
   leafletJS: [
     'bower_components/leaflet/dist/leaflet-src.js',
@@ -168,7 +173,7 @@ gulp.task('sass', function () {
 });
 
 // Compiles and copies the Foundation for Apps JavaScript, as well as your app's custom JS
-gulp.task('uglify', ['uglify:foundation', 'uglify:leaflet', 'uglify:app'])
+gulp.task('uglify', ['uglify:foundation', 'uglify:leaflet', 'uglify:marked', 'uglify:app'])
 
 gulp.task('uglify:foundation', function(cb) {
   var uglify = $.if(isProduction, $.uglify()
@@ -192,6 +197,19 @@ gulp.task('uglify:leaflet', function(cb) {
   return gulp.src(paths.leafletJS)
     .pipe(uglify)
     .pipe($.concat('leaflet.js'))
+    .pipe(gulp.dest('./build/assets/js/'))
+  ;
+});
+
+gulp.task('uglify:marked', function(cb) {
+  var uglify = $.if(isProduction, $.uglify()
+    .on('error', function (e) {
+      console.log(e);
+    }));
+
+  return gulp.src(paths.markedJS)
+    .pipe(uglify)
+    .pipe($.concat('marked.js'))
     .pipe(gulp.dest('./build/assets/js/'))
   ;
 });

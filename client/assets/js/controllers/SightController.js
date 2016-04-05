@@ -1,19 +1,28 @@
 angular.module('application')
-  .controller('SightController', [ '$scope', '$rootScope',  '$state', '$http', 'DataSource',  function($scope, $rootScope, $state, $http, DataSource) {
+  .controller('SightController', [ '$scope', '$state', 'DataSource', 'AudioPlayer',  function($scope, $state, DataSource, AudioPlayer) {
+
+    $scope.isPlaying = function() {
+      return AudioPlayer.isPlayingTrack($scope.sight.slug);
+    }
+
+    $scope.playPause = function() {
+      AudioPlayer.playPauseTrack($scope.sight.slug);
+    }
+
+    $scope.$on('audio.stateChanged', function(r, date){
+      $scope.$apply();
+    });
+
+    //
 
     var slug = ($state.params.slug);
     if(!slug) {
       return;
     }
 
-    $scope.play = function() {
-      $rootScope.$broadcast('audio.play', slug);
-    }
-
     DataSource.getSight(slug).then(function(sight) {
+      sight.contentSrc = DataSource.getContentForSight(sight);
       $scope.sight = sight;
     });
-
-
 
   }])

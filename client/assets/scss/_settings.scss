@@ -98,7 +98,7 @@
  $body-antialiased: true;
 
 // Application Colors
- $primary-color: #DF4C48; // Set to Sanna
+ $primary-color: #DF4C48; // Set to another color than original (used Sanna colors)
  $secondary-color: #f1f1f1;
  $alert-color: #F04124;
  $info-color: #A0D3E8;
@@ -123,7 +123,7 @@
 // These are our named breakpoints. You can use them in our breakpoint function like this: @include breakpoint(medium) { // Medium and larger styles }
  $breakpoints: (
    small: rem-calc(0),
-   medium: rem-calc(640),
+   medium: rem-calc(780), //Changed to 780 from original setting
    large: rem-calc(1200),
    xlarge: rem-calc(1440),
    xxlarge: rem-calc(1920),
