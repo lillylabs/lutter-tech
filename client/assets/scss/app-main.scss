@@ -1,13 +1,17 @@
 main {
 
+  padding: 1rem;
+  position: relative;
+
   nav {
-    button {
-      top: 0;
-      right: 0;
-    }
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 
   header {
+    margin-top: 2rem;
+
     h1, button {
       display: inline-block;
     }
