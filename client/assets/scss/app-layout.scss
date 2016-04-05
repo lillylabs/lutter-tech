@@ -1,4 +1,4 @@
-.map {
+.map-container {
   height: 300px;
   width: 100%;
 
@@ -17,4 +17,35 @@
     top: 0;
     right: 0;
   }
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+@include breakpoint(medium) {
+
+  body {
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .main-container {
+    order: 1;
+    flex: 0 0 40%;
+    max-width: 30rem;
+    min-width: 25rem;
+    overflow-y: auto;
+  }
+
+  .map-container {
+    order: 2;
+    height: 100%;
+  }
+
 }
