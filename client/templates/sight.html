@@ -4,14 +4,16 @@ url: /sight/:slug
 controller: SightController
 ---
 <nav>
+  <span class="badge" ng-bind="sight.id"></span>
   <a ui-sref="home"><i class="fa fa-times"></i></a>
 </nav>
 
 <header>
-  <h1><span ng-bind="sight.id"></span>: <span ng-bind="sight.title"></span></h1>
-  <button class="button" ng-click="playPause()">
-    <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
-  </button>
+  <h1 ng-bind="sight.title"></h1>
 </header>
+
+<button class="button expand" ng-click="playPause()">
+  <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
+</button>
 
 <section marked ng-include="sight.contentSrc" class="content">
