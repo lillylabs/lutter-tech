@@ -28,7 +28,7 @@ angular.module('application')
       angular.forEach(tour.sections, function(section, sectionKey) {
         angular.forEach(section.sights, function(sight, sightKey) {
           $scope.sights[sight.slug] = {
-            group: 'tour',
+//            group: 'tour',
             lat: sight.location.lat,
             lng: sight.location.lng,
             icon: {
