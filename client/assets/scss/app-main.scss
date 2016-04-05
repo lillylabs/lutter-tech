@@ -32,6 +32,21 @@ main {
       width: $badge-diameter*1.2;
       line-height: $badge-diameter*1.2;
     }
+
+    .button {
+      float: right;
+      margin-right: 1.5rem;
+      color: white;
+      background: #cdcdcd;
+
+      &.pause {
+        background: $primary-color;
+      }
+
+      &:hover, &:focus {
+        color: white;
+      }
+    }
   }
 
   .content {

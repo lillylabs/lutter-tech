@@ -1,5 +1,5 @@
 angular.module('application')
-  .service('AudioPlayer', [ '$rootScope', '$http', 'DataSource',  function($rootScope, $http, DataSource) {
+  .service('AudioPlayer', [ '$http', 'DataSource',  function( $http, DataSource ) {
 
     var audio = new Audio();
     var currentTrack = {};
@@ -34,18 +34,19 @@ angular.module('application')
     }
 
     // listen for audio-element events, and broadcast stuff
-    audio.addEventListener('play', function(){ $rootScope.$broadcast('audio.played', this); });
-    audio.addEventListener('pause', function(){ $rootScope.$broadcast('audio.paused', this); });
-    audio.addEventListener('ended', function(){ $rootScope.$broadcast('audio.ended', this); });
-
-    // respond to set track messsages
-    $rootScope.$on('audio.playPause', function(r, slug){
-      console.log("play pause");
-      playPauseTrack(slug);
+    audio.addEventListener('play', function(){
+      $rootScope.$broadcast('audio.stateChanged', this);
+    });
+    audio.addEventListener('pause', function(){
+      $rootScope.$broadcast('audio.stateChanged', this);
+    });
+    audio.addEventListener('ended', function(){
+      $rootScope.$broadcast('audio.stateChanged', this);
     });
 
     return {
-      isPlayingTrack: isPlayingTrack
+      isPlayingTrack: isPlayingTrack,
+      playPauseTrack: playPauseTrack
     }
 
   }]);

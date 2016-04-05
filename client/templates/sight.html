@@ -13,7 +13,7 @@ controller: SightController
 </header>
 
 <button class="button expand" ng-click="playPause()">
-  <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
+  <i class="fa" ng-class="{'fa-play':!isPlaying(), 'fa-pause':isPlaying()}"></i>
 </button>
 
 <section marked ng-include="sight.contentSrc" class="content">

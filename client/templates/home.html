@@ -14,10 +14,12 @@ controller: HomeController
     <header ng-bind="section.title"></header>
     <ul>
       <li ng-repeat="sight in section.sights" class="with-chevron">
-
-        <a ui-sref="sight({ slug: sight.slug })">
+        <a ng-click="goToSight(sight.slug)">
           <span class="badge" ng-bind="sight.id"></span>
           <span ng-bind="sight.title"></span>
+          <button class="small button" ng-class="{'pause':isPlaying(sight.slug)}" ng-click="playPause(sight.slug); $event.stopPropagation()">
+            <i class="fa" ng-class="{'fa-play':!isPlaying(sight.slug), 'fa-pause':isPlaying(sight.slug)}"></i>
+          </button>
         </a>
       </li>
     </ul>
