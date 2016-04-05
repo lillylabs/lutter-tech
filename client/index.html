@@ -30,10 +30,12 @@
 
   </head>
   <body>
-      <div class="map" ng-controller="MapController">
+      <div class="map-container" ng-controller="MapController">
         <leaflet lf-center="center" tiles="tiles" markers="sights"></leaflet>
       </div>
 
-      <main class="main" ui-view></main>
+      <div class="main-container">
+        <main class="main" ui-view></main>
+      </div>
   </body>
 </html>
