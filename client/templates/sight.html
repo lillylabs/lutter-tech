@@ -8,7 +8,7 @@ controller: SightController
 </nav>
 
 <header>
-  <h1 ng-bind="sight.title"></h1>
+  <h1><span ng-bind="sight.id"></span>: <span ng-bind="sight.title"></span></h1>
   <button class="button" ng-click="playPause()">
     <i class="fa" ng-class="{'fa-play':isPaused, 'fa-pause':!isPaused}"></i>
   </button>
