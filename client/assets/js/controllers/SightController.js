@@ -11,6 +11,7 @@ angular.module('application')
     $scope.isPaused = !AudioPlayer.isPlayingTrack(slug);
 
     DataSource.getSight(slug).then(function(sight) {
+      sight.contentSrc = DataSource.getContentForSight(sight);
       $scope.sight = sight;
     });
 

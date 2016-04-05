@@ -5,6 +5,7 @@
     'ui.router',
     'ngAnimate',
     'ui-leaflet',
+    'hc.marked',
 
     //foundation
     'foundation',
