@@ -80,6 +80,54 @@
             "lat": 59.935819,
             "lng": 10.764870999999971
           }
+        },
+        {
+          "title": "Ankerkvartalet - en myk megastruktur?",
+          "slug": "ankerkvartalet",
+          "location": {
+            "lat": 59.916527,
+            "lng": 10.757070
+          }
+        },
+        {
+          "title": "Den røde fane i Birkelunden",
+          "slug": "birkelunden",
+          "location": {
+            "lat": 59.926336,
+            "lng": 10.759587
+          }
+        },
+        {
+          "title": "Hest og elektrisk sporvogn opp bakkene i Toftes gate",
+          "slug": "hestogelektriskvogn",
+          "location": {
+            "lat": 59.927589,
+            "lng": 10.761068
+          }
+        },
+        {
+          "title": "Nye pedagogiske ideer til Grünerløkka",
+          "slug": "pedagogiskeideer",
+          "location": {
+            "lat": 59.926317,
+            "lng": 10.761942
+          }
+        },
+        {
+          "title": "Når hviledagen blir hverdag",
+          "slug": "hviledagen",
+          "location": {
+            "lat": 59.919849,
+            "lng": 10.757339
+          }
+        },
+        {
+          "title": "Nye pedagogiske ideer til Grünerløkka",
+          "slug": "synagogen",
+          "location": {
+            "lat": 59.916445,
+            "lng": 10.755000
+          }
         }
       ]
     }
