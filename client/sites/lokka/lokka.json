@@ -106,6 +106,14 @@
           }
         },
         {
+          "title": "Kampen om Grünerløkka",
+          "slug": "kampen",
+          "location": {
+            "lat": 59.922295,
+            "lng": 10.757114
+          }
+        },
+        {
           "title": "Nye pedagogiske ideer til Grünerløkka",
           "slug": "pedagogiskeideer",
           "location": {
