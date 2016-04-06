@@ -42,11 +42,43 @@
           }
         },
         {
+          "title": "Synagogen i Calmeyersgatea",
+          "slug": "synagogen",
+          "location": {
+            "lat": 59.916445,
+            "lng": 10.755000
+          }
+        },
+        {
+          "title": "Ankerkvartalet - en myk megastruktur?",
+          "slug": "ankerkvartalet",
+          "location": {
+            "lat": 59.916527,
+            "lng": 10.757070
+          }
+        },
+        {
           "title": "100% kosher melk ved Nybrua",
           "slug": "koshermelk",
           "location": {
             "lat": 59.91959885169308,
             "lng": 10.758257624328621
+          }
+        },
+        {
+          "title": "Når hviledagen blir hverdag",
+          "slug": "hviledagen",
+          "location": {
+            "lat": 59.919849,
+            "lng": 10.757339
+          }
+        },
+        {
+          "title": "Kampen om Grünerløkka",
+          "slug": "kampen",
+          "location": {
+            "lat": 59.922295,
+            "lng": 10.757114
           }
         },
         {
@@ -63,6 +95,30 @@
           "location": {
             "lat": 59.926353,
             "lng": 10.757923000000005
+          }
+        },
+        {
+          "title": "Den røde fane i Birkelunden",
+          "slug": "birkelunden",
+          "location": {
+            "lat": 59.926336,
+            "lng": 10.759587
+          }
+        },
+        {
+          "title": "Nye pedagogiske ideer til Grünerløkka",
+          "slug": "pedagogiskeideer",
+          "location": {
+            "lat": 59.926317,
+            "lng": 10.761942
+          }
+        },
+        {
+          "title": "Hest og elektrisk sporvogn opp bakkene i Toftes gate",
+          "slug": "hestogelektriskvogn",
+          "location": {
+            "lat": 59.927589,
+            "lng": 10.761068
           }
         },
         {
