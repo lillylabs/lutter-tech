@@ -6,7 +6,8 @@ controller: HomeController
 
 <header>
   <h1 ng-bind="tour.title"></h1>
-  <div class="content" marked="tour.lead"></div>
+  <div ng-if="tour.lead" class="content" marked="tour.lead"></div>
+  <div ng-if="!tour.lead" marked ng-include="'/site/markdown/preface.md'" class="content" />
 </header>
 
 <section class="block-list">
@@ -26,14 +27,4 @@ controller: HomeController
   </div>
 </section>
 
-<section ng-if="tour.partners" class="partners">
-  <h1 ng-if="tour.partners.heading" ng-bind="tour.partners.heading"></h1>
-  <p ng-if="tour.partners.lead" ng-bind="tour.partners.lead"></p>
-  <ul>
-    <li ng-repeat="partner in tour.partners.list">
-      <a ng-href="{{partner.url}}">
-      <img ng-src="/site/img/{{partner.logo}}" />
-      </a>
-    </li>
-  </ul>
-</section>
+<section marked ng-include="'/site/markdown/epilogue.md'" class="epilogue" />
