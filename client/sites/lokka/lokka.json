@@ -1,22 +1,5 @@
 {
   "title": "En historisk tur fra sentrum til Torshov",
-  "lead": "Lydklippene følger trikkesporet fra **Brugata** til **Thorsov**.  \nØnsker du en audioguide (lyd + teknologi) som denne ta kontakt med [Lutter Øre](https://lutterore.com/).",
-  "partners": {
-    "heading": "",
-    "lead": "Et samarbeid mellom:",
-    "list": [
-      {
-        "name": "Lutter Øre",
-        "logo": "lutter-ore-logo.jpg",
-        "url":  "http://www.lutterore.no"
-      },
-      {
-        "name": "Lilly Labs",
-        "logo": "lilly-labs-logo.png",
-        "url":  "http://lillylabs.no/"
-      }
-    ]
-  },
   "center": {
     "lat": 59.923319,
     "lng": 10.758187,
@@ -61,8 +44,8 @@
           "title": "100% kosher melk ved Nybrua",
           "slug": "koshermelk",
           "location": {
-            "lat": 59.91959885169308,
-            "lng": 10.758257624328621
+            "lat": 59.918020,
+            "lng": 10.759346
           }
         },
         {
